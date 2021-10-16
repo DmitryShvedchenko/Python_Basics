@@ -7,18 +7,22 @@ def sum_num():
                 return s
             else:
                 try:
-                    s+= int(num)
+                    s += int(num)
                 except ValueError:
                     print('Чтобы выйти из программы нажмите q - ')
-
         print(f'Сумма чисел = {s}')
 
 
-num = 0
-try:
-    while num != 'q':
-        for i in map(int, input('Для выхода наберите q Введите числе используя пробел - ').split()):
-            num += i
+def main():
+    num = 0
+    try:
+        while num != 'n':
+            for i in map(int, input('Для выхода наберите n. Введите числа через пробел - ').split()):
+                num += i
+            print(num)
+    except ValueError:
         print(num)
-except ValueError:
-    print(num)
+
+
+if __name__ == '__main__':
+    main()

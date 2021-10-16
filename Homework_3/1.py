@@ -1,11 +1,17 @@
-def div(s_1, s_2):
+def div(num_1, num_2):
     try:
-        s_1, s_2 = int(s_1), int(s_2)
-        div_num = s_1 / s_2
+        num_1, num_2 = int(num_1), int(num_2)
+        div_num = num_1 / num_2
     except ValueError:
-        return 'ValueError'
+        return 'Пожалуйста, введите числа'
     except ZeroDivisionError:
-        return 'ZeroDivisionError HAHAHAHA'
+        return 'Второе число должно отличаться от нуля'
     return round(div_num, 4)
 
-print(div(input('Введите первое число - '), input('Введите второе число - ')))
+
+def main():
+    print(div(input('Введите первое число - '), input('Введите второе число - ')))
+
+
+if __name__ == '__main__':
+    main()
